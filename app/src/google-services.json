@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "999576384227",
+    "project_id": "netplay-15805",
+    "storage_bucket": "netplay-15805.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999576384227:android:51467e172e59e8a215cbd6",
+        "android_client_info": {
+          "package_name": "com.dbug.netplay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMZn0R6V5CYO-Jlbi2TfTaQ9WkLhO0QNs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

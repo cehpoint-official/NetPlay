@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/background_color">
+        <LinearLayout
+            android:layout_above="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@android:color/transparent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_7sdp">
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/background_color"
+                    android:minHeight="?attr/actionBarSize"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:titleTextColor="@android:color/white"
+                    app:layout_scrollFlags="scroll|enterAlways"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:textColor="?attr/main_text_color"
+                        android:gravity="center"
+                        android:textSize="24sp"
+                        android:text="@string/details_title"
+                        android:fontFamily="@font/satoshi_bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"/>
+                    <RelativeLayout
+                        android:id="@+id/backButton"
+                        android:layout_width="30dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@android:color/transparent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_baseline_keyboard_backspace" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/shear_button"
+                        android:layout_width="30dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@android:color/transparent">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="10dp"
+                            android:padding="3sp"
+                            android:src="@drawable/ic_baseline_share" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="226dp">
+                <ImageView
+                    android:src="@drawable/banar"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/thumbnailImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"
+                        android:src="@drawable/player_button"
+                        android:id="@+id/play_buton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_margin="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:layout_editor_absoluteX="0dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp">
+                        <TextView
+                            android:id="@+id/title_activity_item_view"
+                            android:textSize="20sp"
+                            android:textStyle="normal"
+                            android:fontFamily="@font/satoshi_bold"
+                            android:text="movie name"
+                            android:padding="5dp"
+                            android:textColor="?attr/black_white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toStartOf="@+id/fav_layout"
+                            android:layout_alignParentStart="true"/>
+                        <RelativeLayout
+                            android:id="@+id/fav_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:padding="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_alignParentTop="true">
+
+                            <ImageView
+                                android:id="@+id/favButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_heart" />
+
+                            <ImageView
+                                android:id="@+id/favButton_full"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_heart_active"
+                                android:visibility="gone"/>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/category_name_textView"
+                        android:padding="6dp"
+                        android:textSize="16sp"
+                        android:text="Category Name"
+                        android:textColor="?attr/secondary_text_color"
+                        android:fontFamily="@font/satoshi_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:layout_marginTop="25dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_baseline_remove_red_eye"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                />
+                            <TextView
+                                android:id="@+id/total_views_textView"
+                                android:textSize="16sp"
+                                android:text="500 views"
+                                android:paddingStart="15dp"
+                                android:textStyle="normal"
+                                android:textColor="?attr/main_text_color"
+                                android:fontFamily="@font/satoshi_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/date_textView"
+                            android:textSize="16sp"
+                            android:text="date"
+                            android:textColor="?attr/main_text_color"
+                            android:fontFamily="@font/satoshi_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/time_textView"
+                            android:layout_marginEnd="30dp"/>
+                        <TextView
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/time_textView"
+                            android:textSize="16sp"
+                            android:text="time"
+                            android:textColor="?attr/main_text_color"
+                            android:fontFamily="@font/satoshi_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginBottom="10dp">
+                        <TextView
+                            android:id="@+id/l1"
+                            android:textSize="20sp"
+                            android:textStyle="normal"
+                            android:padding="5dp"
+                            android:fontFamily="@font/satoshi_bold"
+                            android:text="@string/description"
+                            android:textColor="?attr/black_white"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                        <WebView
+                            android:id="@+id/video_description"
+                            android:textSize="16sp"
+                            android:padding="5dp"
+                            android:textColor="?attr/secondary_text_color"
+                            android:text="@string/description"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/l1"/>
+                    </RelativeLayout>
+                    <androidx.cardview.widget.CardView
+                        android:visibility="gone"
+                        android:backgroundTint="#EBECF0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <WebView
+                            android:padding="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="16sp"
+                            android:textColor="?attr/black_white"
+                            android:text="video description"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/adView"
+            android:background="?attr/background_color"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </FrameLayout>
+    </RelativeLayout>
+
+</layout>

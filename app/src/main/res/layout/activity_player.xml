@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".activity.PlayerActivity">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/webplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerCrop">
+
+
+        <FrameLayout
+            android:background="@android:color/transparent"
+            android:id="@+id/webViewEm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:showFullScreenButton="true"
+        app:showYouTubeButton="true"/>
+
+
+    <xyz.doikki.videoplayer.player.VideoView
+        android:visibility="gone"
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

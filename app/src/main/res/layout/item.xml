@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Card View widget-->
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginStart="@dimen/_4sdp"
+    android:layout_marginEnd="@dimen/_7sdp"
+    android:layout_marginBottom="@dimen/_15sdp"
+    android:id="@+id/favcardview"
+    android:background="@android:color/transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="5sp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            card_view:cardCornerRadius="4sp"
+            android:background="@android:color/transparent">
+            <ImageView
+                android:src="@drawable/dbug_logo"
+                android:id="@+id/video_image"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="@dimen/_15sdp">
+        <TextView
+            android:id="@+id/title_textView"
+            android:textSize="16sp"
+            android:fontFamily="@font/satoshi_medium"
+            android:maxLines="1"
+            android:textStyle="normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/black_white"
+            android:layout_marginTop="-5sp"/>
+        <TextView
+            android:id="@+id/category_textView"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/satoshi_regular"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/secondary_text_color"/>
+
+    </LinearLayout>
+    <!--Text View over Card View-->
+
+</LinearLayout>

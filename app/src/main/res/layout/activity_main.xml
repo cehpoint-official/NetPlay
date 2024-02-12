@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_anchorGravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/background_color">
+                <FrameLayout
+                    android:id="@+id/navigation_frame_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_above="@+id/bottom_navigation_layout"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bottom_navigation_layout"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="?attr/main_text_color"
+                    android:layout_alignParentBottom="true"
+                    android:elevation="100dp"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    android:clipChildren="false"
+                    card_view:cardElevation="0dp"
+                    card_view:cardPreventCornerOverlap="true"
+                    card_view:cardBackgroundColor="@android:color/transparent">
+                    <ImageView
+                        android:id="@+id/bottom_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="75sp"
+                        android:src="@drawable/nav_bottom_bg"
+                        android:scaleType="fitXY"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_55sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        android:background="@android:color/transparent"
+                        android:layout_alignParentBottom="true">
+                        <RelativeLayout
+                            android:id="@+id/nav_home"
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/nav_home_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_home_active" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/nav_category"
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/nav_category_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_category"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/nav_fav"
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/nav__fav_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_heart"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/nav_settings"
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/nav_settings_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_setting"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+
+</layout>
